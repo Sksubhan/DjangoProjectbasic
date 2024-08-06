@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="vote">
+    {% csrf_token %}
+    <center>
+        <table>
+            <tr>
+                <td>AGE</td>
+                <td> <input type="number" name="age1" placeholder="Enter your age" required></td>
+            </tr>
+            <tr>
+                <td><button type="submit" name="sub1" value="SUBMIT">SUBMIT</button>
+            </tr>
+        </table>
+
+        <h1>{{ text }}</h1>
+    </center>
+</form>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+
+    body {
+    font-family: Arial, sans-serif;
+    background-color: grey;
+    margin: 0;
+    padding: 20px;
+}
+
+.calculator-container {
+    max-width: 400px;
+    margin: auto;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+input[type="number"], input[type="text"], input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    opacity: 0.5;
+}
+    #v1 {
+  background-color:skyblue;
+  border-radius:10px;
+  border:;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+}
+</style>
+</head>
+<body>
+<form method="post" action="read">
+    {% csrf_token %}
+
+ <div class="calculator-container">
+     <h1>SIMPLE CALCULATER</h1>
+        <table>
+            <tr>
+                <td><input type="number" placeholder="ENTER A NUMBER" name="txt1" value="{{ n1 }}"></td>
+            </tr>
+            <tr>
+                <td><input type="number" placeholder="ENTER A NUMBER" name="txt2" value="{{ n2 }}"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Add" name="operation">
+                    <input type="submit" value="Sub" name="operation">
+                    <input type="submit" value="Mul" name="operation">
+                    <input type="submit" value="Div" name="operation">
+                </td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="GET THE RESULT" value="{{ res }}"></td>
+            </tr>
+
+
+        </table>
+    </div>
+    <center>
+    <button id="v1"><a href="vote" >VOTE PAGE</a></button>
+        </center>
+    </form>
+</body>
+</html>
